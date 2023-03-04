@@ -9,16 +9,13 @@
       sizes="32x32"
       href="./img/icons/brand.png"
     />
-    <title>Clothing Store</title>
-    <link
+    <title>Online Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
+      <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -32,22 +29,34 @@
           <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
         </a>
         <span
-          ><i>Clothing<span>- </span> Store</i></span
+          ><i>Online<span>- </span> Store</i></span
         >
       </div>
       <div>
         <ul class="navItems" id="navItems">
-          <li><a href="./index.html" class="active">Home</a></li>
-          <li class="dropdown active"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Store</a>
+          <li ><a class="active" href="./index.html">Shop</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="">categories</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./men.html">Mens' Fashion</a></li>
-              <li><a class="dropdown-item" href="./women.html">Womens' Fashion</a></li>
-              <li><a class="dropdown-item" href="./girls.html">Girls' Fashion</a></li>
-              <li><a class="dropdown-item" href="./boys.html">Boys' Fashion</a></li>
-              <li><a class="dropdown-item" href="./shoesPro.html">Shoes</a></li>
+              <li><a class="dropdown-item" href="./electro.html">Electronics</a></li>
+              <li><a class="dropdown-item" href="./health.html">Personal care</a></li>
+              <li><a class="dropdown-item" href="./clothing.html">Clothing</a></li>
+              <li><a class="dropdown-item" href="./footwear.html">Foot Wear</a></li>
             </ul>
           </li>
           <li><a href="./aboutus.html">About Us</a></li>
+          <li class="dropdown">           
+              <div class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="">
+                 <b>EN </b><img width="30px" height="auto" src="./img/icons/flags/united-kingdom.png" alt="">
+                 <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href=""><img width="30px" height="auto" src="" alt="">French</a></li>
+                  <li><a class="dropdown-item" href="">Spanish</a></li>
+                  <li><a class="dropdown-item" href="">Portuguese</a></li>
+                  <li><a class="dropdown-item" href="">Arab</a></li>
+                  <li><a class="dropdown-item" href="">Chinese</a></li>
+                  <li><a class="dropdown-item" href="">Deutsch</a></li>
+                </ul>
+              </div>
+           </li>
           <li>
             <a href="./index.html">
               <div class="navBrandBox navBrandBoxMobile">
@@ -59,7 +68,7 @@
                   />
                 </a>
                 <span
-                  ><i>Clothing<span>- </span> Store</i></span
+                  ><i>Online<span>- </span> Store</i></span
                 >
               </div>
             </a>
@@ -91,50 +100,416 @@
       <div id="mobile" class="mobileNav">
         <div>
           <button
-            class="mobileCart cartTransBtn"
-            onclick="displayCartOverlay()"
-          >
+            class="mobileCart cartTransBtn" onclick="displayCartOverlay()">
             <div>
               <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
             </div>
-            <span
-              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
-              id="mobileItemsUpdate"
-              >0</span
-            >
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="mobileItemsUpdate">0</span>
           </button>
         </div>
-        <ion-icon
-          id="mobileMenu"
-          class="mobileMenu"
-          size="large"
-          name="menu-outline"
-        ></ion-icon>
+        <ion-icon id="mobileMenu" class="mobileMenu" size="large" name="menu-outline"></ion-icon>
       </div>
     </section>
     <!-- Navbar and Header Section Ends here -->
 
     <!-- cover Section -->
-    <section class="shopCover" id="shopCover">
-      <div class="shopCoverContent">
-        <h2 class="">Find Your Fit</h2>
-        <h5 class="">
-          Classy clothing for executives to athletes, comedians, entertainers,
-          and everything in between
-        </h5>
+    <section>
+     <!-- Background image -->
+  <div id="intro-example" class="p-5 text-center bg-image">
+    <div class="mask" style="background-color: rgba(235, 72, 63, 0);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <div class="signUpFrom">
+            <input type="text" placeholder="Search items here" />
+            <button class="basic">
+              <ion-icon name="search"></ion-icon>
+            </button>
+          </div>
+          <!-- <h1 style="color: rgba(235, 72, 63, 0.959); font-weight: bold; padding: -1rem;" class="mb-1">Start Shoppping with Us<i>!</i></h1>
+          <h5 style="color: rgb(12, 9, 3);font-weight: bold; font-size: 1.8rem;" class="mb-1">Best prices and products for you<i>!</i></h5> -->
+        </div>
       </div>
+    </div>
+  </div>
+  <!-- Background image -->
     </section>
     <!-- cover Section Ends here -->
 
-    <!-- feature Section -->
-
-    <!-- feature Section Ends here -->
-
-    <!-- Products Section -->
-    <section id="products" class="products section-p1">
-      <div class="productsBox" id="productsBox"></div>
+    <!-- promo banners section -->
+    <section id="proBanner" class="proBanner section-p1">
+      <div class="container-fluid marginSides">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">AMAZING DEALS</h5>
+              <div class="promoBox promo">
+                
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Promotion deals thats save 30%</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">PERSONAL STYLING</h5>
+              <div class="promoBox promo1">
+                
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Custom Branding Just For You</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">AMAZING DEALS</h5>
+              <div class="promoBox promo2">
+               
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Promotion deals thats save 30%</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">Promo Sales</h5>
+              <div class="promoBox promo3">
+                <h2></h2>
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Custom Branding Just For You</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- products section ends here -->
+    <!-- promo banners section ends here -->
+
+    <!-- products banners section -->
+    <section class="productBanners section-p1">
+      <div class="container-fluid marginSides">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">Business class collection</h5>
+              <div class="promoBox productBanner1">
+                <h2>Buy 1 get 1 free</h2>
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Promotion deals thats save 30%</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">PERSONAL STYLING</h5>
+              <div class="promoBox productBanner2">
+                <h2>Money Saver</h2>
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Custom Branding Just For You</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">C-Suite executives</h5>
+              <div class="promoBox productBanner3">
+                <h2>Buy 1 get 1 free</h2>
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Promotion deals thats save 30%</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="promoCard">
+              <h5 class="cardTitle">LOOK AND FEEL GOOD</h5>
+              <div class="promoBox productBanner4">
+                <h2>Promo Sales</h2>
+                <button class="white">Learn More</button>
+              </div>              
+              <div class="card-body">                
+                <p class="card-text">Custom Branding Just For You</p>                
+                <!-- <button class="white">
+                  <a href="" class="">Learn More</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- products banners section ends here -->
+
+    <section class="clothingItems marginSides">
+      <!-- Slider main container -->
+      <div class="homeSwiper swiper">
+          <div id="swiper-wrapper" class="swiper-wrapper">
+              <!-- <div class="swiper-slide">
+                  
+              </div>               -->
+          </div>
+          <div class="swipeButtons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+           
+        </div>
+      </div>
+  </section>  
+
+  <section class="banner" id="banner">
+    <h4>Promo Sales %</h4>
+    <h2>Up to <span>70% off</span> - All Tshirts and Accessories</h2>
+    <button>Explore more<i>!</i></button>
+  </section>
+
+  <section id="products" class="products marginSides">
+        <div class="cards-wrapper">
+      <div class="cards cardRow" id="cards">
+        <div class="">
+          <!-- single Product -->
+          <div class="card">
+            <div class="product">
+            <img class="itemImage" src="./img/categoreis/electro/controller.jpg" />
+              <div class="description">
+                <span class="itemTitle">${product.title}</span> 
+                <h5>${product.description}</h5>         
+              </div>
+              <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+              <div class="priceBtns">
+                <h4 class="itemPrice">Ghc 17.99</h4>
+              <!--  -->
+              </div>    
+            </div>     
+            </div>   
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/tv.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 56.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/vacuum.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 889.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>    
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/foot/foot9.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 99.00</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/health/pers12.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 97.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/foot/foot8.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 87.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 87.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 87.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 87.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 87.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 87.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+      <!-- single Product -->
+      <div class="card">
+        <div class="product">
+        <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
+          <div class="description">
+            <span class="itemTitle">${product.title}</span> 
+            <h5>${product.description}</h5>         
+          </div>
+          <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+          <div class="priceBtns">
+            <h4 class="itemPrice">Ghc 87.99</h4>
+          <!--  -->
+          </div>    
+        </div>     
+        </div>  
+      <!-- single product ends here -->
+        </div>
+        <div class="cardRow1"></div>
+      </div>
+      <div class="cards-nav"><span class="cards-nav-left disabled">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg></span><span class="cards-nav-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg></span>
+        </div>
+    </div>
+    
+  </section>
+    
+
+
 
     <!-- cart overlay -->
     <section id="cartOverlay">
@@ -162,41 +537,7 @@
       </div>
     </section>
     <!-- cartoverlay ends here -->
-
-    <!-- promo banners section -->
-    <section id="proBanner" class="proBanner section-p1 section-m1">
-      <div class="promoBox promo">
-        <h4>AMAZING DEALS</h4>
-        <h2>Buy 1 get 1 free</h2>
-        <span>Promotion deals thats save 30%</span>
-        <button class="white">Learn More</button>
-      </div>
-
-      <div class="promoBox promo1">
-        <h4>PERSONAL STYLING</h4>
-        <h2>Shop your signature look</h2>
-        <span>Custom Branding Just For You</span>
-        <button class="white">Contact Us</button>
-      </div>
-    </section>
-    <!-- promo banners section ends here -->
-
-    <!-- products banners section -->
-    <section class="productBanners">
-      <div class="bannerBox productBanner1">
-        <h2>ICY BRANDING</h2>
-        <h3>Business class collection</h3>
-      </div>
-      <div class="bannerBox productBanner2">
-        <h2>LOOK AND FEEL GOOD</h2>
-        <h3>A colection of shirts and other apparel</h3>
-      </div>
-      <div class="bannerBox productBanner3">
-        <h2>C-Suite executives</h2>
-        <h3>Business class collection</h3>
-      </div>
-    </section>
-    <!-- products banners section ends here -->
+    
 
     <!-- newsletter section -->
     <section id="newsletter" class="newsletter section-p1 section-m1">
@@ -225,7 +566,7 @@
             <img src="./img/icons/brand.png" class="footerBrandImage" alt="" />
           </a>
           <span
-            ><i>Clothing<span>- </span> Store</i></span
+            ><i>Online<span>- </span> Store</i></span
           >
         </div>
         <h4>Contact</h4>
@@ -285,7 +626,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p>© 2022, <i>paakowamoquandoh@gmail.com</i> for Icy Suits</p>
+        <p>© 2022, <i>paakowamoquandoh@gmail.com</i> for Peni</p>
       </div>
     </footer>
     <!-- footere section ends here -->
@@ -310,6 +651,8 @@
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"
   ></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="./js/display.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/slider/slider.js"></script>
 </html>

@@ -9,7 +9,7 @@
       sizes="32x32"
       href="./img/icons/brand.png"
     />
-    <title>Clothing Store</title>
+    <title>Online Store</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -32,22 +32,34 @@
           <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
         </a>
         <span
-          ><i>Clothing<span>- </span> Store</i></span
+          ><i>Online<span>- </span> Store</i></span
         >
       </div>
       <div>
         <ul class="navItems" id="navItems">
-          <li><a href="./index.html">Home</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="./categoreis.html" class="active">Store</a>
+          <li><a href="./index.html">Shop</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="">categories</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./men.html">Mens' Fashion</a></li>
-              <li><a class="dropdown-item" href="./women.html">Womens' Fashion</a></li>
-              <li><a class="dropdown-item" href="./girls.html">Girls' Fashion</a></li>
-              <li><a class="dropdown-item" href="./boys.html">Boys' Fashion</a></li>
-              <li><a class="dropdown-item" href="./shoesPro.html">Shoes</a></li>
+              <li><a class="dropdown-item" href="./electro.html">Electronics</a></li>
+              <li><a class="dropdown-item" href="./health.html">Personal care</a></li>
+              <li><a class="dropdown-item" href="./clothing.html">Clothing</a></li>
+              <li><a class="dropdown-item" href="./footwear.html">Foot Wear</a></li>
             </ul>
           </li>
           <li><a href="./aboutus.html">About Us</a></li>
+          <li class="dropdown">           
+            <div class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="">
+               <b>EN </b><img width="30px" height="auto" src="./img/icons/flags/united-kingdom.png" alt="">
+               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">French</a></li>
+                <li><a class="dropdown-item" href="">Spanish</a></li>
+                <li><a class="dropdown-item" href="">Portuguese</a></li>
+                <li><a class="dropdown-item" href="">Arab</a></li>
+                <li><a class="dropdown-item" href="">Chinese</a></li>
+                <li><a class="dropdown-item" href="">Deutsch</a></li>
+              </ul>
+            </div>
+         </li>
           <li>
             <a href="./index.html">
               <div class="navBrandBox navBrandBoxMobile">
@@ -59,7 +71,7 @@
                   />
                 </a>
                 <span
-                  ><i>Clothing<span>- </span> Store</i></span
+                  ><i>Online<span>- </span> Store</i></span
                 >
               </div>
             </a>
@@ -234,12 +246,27 @@
               <label>
                 <input type="checkbox" checked="checked" name="sameadr" />
                 Shipping address same as billing
-              </label>
-              <input
-                type="submit"
-                value="Continue to checkout"
-                class="btn checkoutBtn"
-              />
+                </label>
+                <button type="button" class="btn checkoutBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Continue to
+                  checkout</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout Successful</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                       <img src="./img/icons/check.gif" class="img-fluid" alt="">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
             </form>
           </div>
         </div>
@@ -257,7 +284,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <!--  -->
 
@@ -289,7 +315,7 @@
             <img src="./img/icons/brand.png" class="footerBrandImage" alt="" />
           </a>
           <span
-            ><i>Clothing<span>- </span> Store</i></span
+            ><i>Online<span>- </span> Store</i></span
           >
         </div>
         <h4>Contact</h4>

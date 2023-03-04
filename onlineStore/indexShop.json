@@ -1,0 +1,59 @@
+{
+    "items": [
+     
+{
+  "sys": { "id" : "electronics"},
+  "fields": {
+    "title": "Accessories",
+    "description": "Contoured to the body, slim but has some room for comfort",
+    "price": 460,
+    "image": { "fields": {"file": {"url": "./img/categoreis/electro/appliances.jpg"}}}
+  }
+},
+      {
+          "sys": { "id" : "africanWear"},
+          "fields": {
+            "title": "African Wear",
+            "description": "Iconic modern African apparel styles.",
+            "price": 391,
+            "image": { "fields": {"file": {"url": "../img/homeCart/image9.png"}}}
+          }
+      },
+      {
+        "sys": { "id" : "africanWear"},
+        "fields": {
+          "title": "Shoes",
+          "description": "Iconic modern African apparel styles.",
+          "price": 391,
+          "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot4.jpg"}}}
+        }
+    },
+    {
+      "sys": { "id" : "longSleeves"},
+      "fields": {
+        "title": "Health Care",
+        "description": "Iconic modern long sleeve styles.",
+        "price": 193,
+        "image": { "fields": {"file": {"url": "./img/categoreis/health/pers5.jpg"}}}
+      }
+  },
+  {
+    "sys": { "id" : "africanWear"},
+    "fields": {
+      "title": "Shoes",
+      "description": "Iconic modern African apparel styles.",
+      "price": 391,
+      "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot2.jpg"}}}
+    }
+},
+{
+  "sys": { "id" : "longSleeves"},
+  "fields": {
+    "title": "Health Care",
+    "description": "Iconic modern long sleeve styles.",
+    "price": 193,
+    "image": { "fields": {"file": {"url": "./img/categoreis/health/pers3.jpg"}}}
+  }
+}
+    ]
+}

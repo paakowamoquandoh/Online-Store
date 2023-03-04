@@ -1,6 +1,8 @@
-// import { shopItems } from "./shop.js";
 // shop variables
-const productArea = document.getElementById("productsBox");
+const productArea = document.getElementById("cards");
+const electroProductsBox = document.getElementById("swiper-wrapper");
+const persProductsBox = document.getElementById("persCards");
+const footProductsBox = document.getElementById("footCards");
 const cartButton = document.querySelector(".cartTransBtn");
 const closeCartBtn = document.querySelector(".closeCart");
 const ClearCartBtn = document.querySelector(".cartFooterButton");
@@ -49,22 +51,29 @@ class UI {
     products.forEach(product => {
       itemResult += `
       <!-- single Product -->
+      <div class="swiper-slide">
+      <div class="card">
       <div class="product">
-        <img class="itemImage" src=${product.image} />
+      <img class="itemImage" src=${product.image} />
         <div class="description">
-          <span class="itemTitle">${product.title}</span>
+          <span class="itemTitle">${product.title}</span> 
           <h5>${product.description}</h5>         
         </div>
+        <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
         <div class="priceBtns">
-          <h4 class="itemPrice">Ghc ${product.price}</h4>
-        <button class="proCart" data-id = ${product.id}>Add to Cart</button>
         <!--  -->
-        </div>
+        </div>    
+      </div>     
       </div> 
+      </div>  
       <!-- single product ends here -->
       `      
     });
-    productArea.innerHTML = itemResult;
+    
+    // productArea.firstElementChild.innerHTML = itemResult;
+    electroProductsBox.innerHTML = itemResult;
+    // persProductsBox.firstElementChild.innerHTML = itemResult;
+    // footProductsBox.firstElementChild.innerHTML = itemResult;
   }
   getAddToCartBtns(){
     const addToCartButtons = [...document.querySelectorAll(".proCart")];
@@ -122,13 +131,6 @@ class UI {
       <h4>${item.title}</h4>
       <h5>Ghc ${item.price}</h5>
         <ion-icon class="removeItem" data-id = ${item.id} name="trash-outline"></ion-icon>
-        <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
      </div>
      <div>
       <ion-icon class="upBtn" name="caret-up-outline" data-id = ${item.id}></ion-icon>
@@ -250,8 +252,78 @@ document.addEventListener("DOMContentLoaded", ()=>{
   }).then( () => {
     ui.getAddToCartBtns();
     ui.cartLogic();
+
   });
 })
+
+const mainSwiper = new Swiper('.homeSwiper', {
+  // Optional parameters
+  slidesPreview: 1,
+  spaceBetween: 20,
+  autoplay: {
+     delay: 27500,
+     disableOnInteraction: false,
+  }, 
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    280:{
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    320:{
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    510:{
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    758:{
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    900:{
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1020:{
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1100:{
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1210:{
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1300:{
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    1400:{
+      slidesPerView: 6,
+      spaceBetween: 20,
+    }
+  },
+});
+
+
+
+
 
 
 

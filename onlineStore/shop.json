@@ -1,112 +1,148 @@
 {
-    "items": [
-        {
-            "sys": { "id" : "classic"},
-            "fields": {
-              "title": "Classic Fit Suit",
-              "description": "Classic, best suits man with a fuller build",
-              "price": 299,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image1.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "slim"},
-            "fields": {
-              "title": "Slim Fit Suit",
-              "description": "Contoured to the body, slim but has some room for comfort",
-              "price": 460,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image2.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "modern"},
-            "fields": {
-              "title": "Modern Fit Suit",
-              "description": "Slim fit, contoured, shorter length.",
-              "price": 367,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image3.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "patchpocket"},
-            "fields": {
-              "title": "Patch Pocket Blazer",
-              "description": "Popular style from the 80s where the classic ‘V’ style was a mainstay",
-              "price": 299,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image4.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "doublebreasted"},
-            "fields": {
-              "title": "Double Breasted Suit",
-              "description": "4, 6 or 8 buttons max, 6 being the most common",
-              "price": 200,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image5.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "singlebreasted"},
-            "fields": {
-              "title": "Single Breasted Suit",
-              "description": "Inclusion of either one, two or three buttons along the seam",
-              "price": 499,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image6.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "peakLapel"},
-            "fields": {
-              "title": "Peak Lapel Suit",
-              "description": "Noticeable high peaks, most popular style from the 16th century.",
-              "price": 444,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image7.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "shawlLapel"},
-            "fields": {
-              "title": "Shawl Lapel Suit",
-              "description": "Rounded sides, continuous curve with no hard edges.",
-              "price": 223,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image8.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "tshirts"},
-            "fields": {
-              "title": "Other clothings",
-              "description": "Iconic modern tshirt styles.",
-              "price": 123,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image9.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "longSleeves"},
-            "fields": {
-              "title": "Other clothings",
-              "description": "Iconic modern long sleeve styles.",
-              "price": 193,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "africanWear"},
-            "fields": {
-              "title": "African Wear",
-              "description": "Iconic modern African apparel styles.",
-              "price": 391,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
-            }
-        },
-        {
-            "sys": { "id" : "shoes"},
-            "fields": {
-              "title": "Shoes",
-              "description": "Iconic modern quality shoes variety.",
-              "price": 150,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image13.png"}}}
-            }
-        }        
-    ]
+  "items": [
+    {
+      "sys": { "id" : "electronics"},
+      "fields": {
+        "title": "Home Appliance",
+        "description": "Classic, best suits man with a fuller build",
+        "price": 299,
+        "image": { "fields": {"file": {"url": "./img/categoreis/electro/access.jpg"}}}
+      }
+  },
+      {
+        "sys": { "id" : "slim"},
+        "fields": {
+          "title": "Slim Fit Suit",
+          "description": "Contoured to the body, slim but has some room for comfort",
+          "price": 460,
+          "image": { "fields": {"file": {"url": "../img/homeCart/image2.png"}}}
+        }
+    },
+    {
+      "sys": { "id" : "classic"},
+      "fields": {
+        "title": "Heels",
+        "description": "Classic, best suits man with a fuller build",
+        "price": 299,
+        "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot1.jpg"}}}
+      }
+  },
+  {
+    "sys": { "id" : "classic"},
+    "fields": {
+      "title": "Personal Care",
+      "description": "Classic, best suits man with a fuller build",
+      "price": 299,
+      "image": { "fields": {"file": {"url": "./img/categoreis/health/personal1.jpg"}}}
+    }
+},
+{
+  "sys": { "id" : "electronics"},
+  "fields": {
+    "title": "Accessories",
+    "description": "Contoured to the body, slim but has some room for comfort",
+    "price": 460,
+    "image": { "fields": {"file": {"url": "./img/categoreis/electro/access1.jpg"}}}
+  }
+},
+      {
+          "sys": { "id" : "africanWear"},
+          "fields": {
+            "title": "African Wear",
+            "description": "Iconic modern African apparel styles.",
+            "price": 391,
+            "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+          }
+      },
+      {
+        "sys": { "id" : "africanWear"},
+        "fields": {
+          "title": "Shoes",
+          "description": "Iconic modern African apparel styles.",
+          "price": 391,
+          "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot3.jpg"}}}
+        }
+    },
+    {
+      "sys": { "id" : "longSleeves"},
+      "fields": {
+        "title": "Health Care",
+        "description": "Iconic modern long sleeve styles.",
+        "price": 193,
+        "image": { "fields": {"file": {"url": "./img/categoreis/health/pers4.jpg"}}}
+      }
+  },
+  {
+    "sys": { "id" : "electronics"},
+    "fields": {
+      "title": "Home Appliance",
+      "description": "Classic, best suits man with a fuller build",
+      "price": 299,
+      "image": { "fields": {"file": {"url": "./img/categoreis/electro/iron.jpg"}}}
+    }
+},
+    {
+      "sys": { "id" : "slim"},
+      "fields": {
+        "title": "Slim Fit Suit",
+        "description": "Contoured to the body, slim but has some room for comfort",
+        "price": 460,
+        "image": { "fields": {"file": {"url": "../img/homeCart/image5.png"}}}
+      }
+  },
+  {
+    "sys": { "id" : "classic"},
+    "fields": {
+      "title": "Heels",
+      "description": "Classic, best suits man with a fuller build",
+      "price": 299,
+      "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot5.jpg"}}}
+    }
+},
+{
+  "sys": { "id" : "classic"},
+  "fields": {
+    "title": "Personal Care",
+    "description": "Classic, best suits man with a fuller build",
+    "price": 299,
+    "image": { "fields": {"file": {"url": "./img/categoreis/health/pers3.jpg"}}}
+  }
+},
+{
+"sys": { "id" : "electronics"},
+"fields": {
+  "title": "Accessories",
+  "description": "Contoured to the body, slim but has some room for comfort",
+  "price": 460,
+  "image": { "fields": {"file": {"url": "./img/categoreis/electro/appliances.jpg"}}}
+}
+},
+    {
+        "sys": { "id" : "africanWear"},
+        "fields": {
+          "title": "African Wear",
+          "description": "Iconic modern African apparel styles.",
+          "price": 391,
+          "image": { "fields": {"file": {"url": "../img/homeCart/image9.png"}}}
+        }
+    },
+    {
+      "sys": { "id" : "africanWear"},
+      "fields": {
+        "title": "Shoes",
+        "description": "Iconic modern African apparel styles.",
+        "price": 391,
+        "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot4.jpg"}}}
+      }
+  },
+  {
+    "sys": { "id" : "longSleeves"},
+    "fields": {
+      "title": "Health Care",
+      "description": "Iconic modern long sleeve styles.",
+      "price": 193,
+      "image": { "fields": {"file": {"url": "./img/categoreis/health/pers5.jpg"}}}
+    }
+}
+  ]
 }

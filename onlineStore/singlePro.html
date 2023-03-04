@@ -9,8 +9,7 @@
       sizes="32x32"
       href="./img/icons/brand.png"
     />
-    <title>Clothing Store</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Online Store</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -21,7 +20,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
   </head>
   <body>
     <!-- Project starts here-->
@@ -33,22 +32,34 @@
           <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
         </a>
         <span
-          ><i>Clothing<span>- </span> Store</i></span
+          ><i>Online<span>- </span> Store</i></span
         >
       </div>
       <div>
         <ul class="navItems" id="navItems">
-          <li><a href="./index.html">Home</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="./categoreis.html" class="active">Store</a>
+          <li><a href="./index.html" class="active">Shop</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="">categories</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./men.html">Mens' Fashion</a></li>
-              <li><a class="dropdown-item" href="./women.html">Womens' Fashion</a></li>
-              <li><a class="dropdown-item" href="./girls.html">Girls' Fashion</a></li>
-              <li><a class="dropdown-item" href="./boys.html">Boys' Fashion</a></li>
-              <li><a class="dropdown-item" href="./shoesPro.html">Shoes</a></li>
+              <li><a class="dropdown-item" href="./electro.html">Electronics</a></li>
+              <li><a class="dropdown-item" href="./health.html">Personal care</a></li>
+              <li><a class="dropdown-item" href="./clothing.html">Clothing</a></li>
+              <li><a class="dropdown-item" href="./footwear.html">Foot Wear</a></li>
             </ul>
           </li>
           <li><a href="./aboutus.html">About Us</a></li>
+          <li class="dropdown">           
+            <div class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="">
+               <b>EN </b><img width="30px" height="auto" src="./img/icons/flags/united-kingdom.png" alt="">
+               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">French</a></li>
+                <li><a class="dropdown-item" href="">Spanish</a></li>
+                <li><a class="dropdown-item" href="">Portuguese</a></li>
+                <li><a class="dropdown-item" href="">Arab</a></li>
+                <li><a class="dropdown-item" href="">Chinese</a></li>
+                <li><a class="dropdown-item" href="">Deutsch</a></li>
+              </ul>
+            </div>
+         </li>
           <li>
             <a href="./index.html">
               <div class="navBrandBox navBrandBoxMobile">
@@ -60,7 +71,7 @@
                   />
                 </a>
                 <span
-                  ><i>Clothing<span>- </span> Store</i></span
+                  ><i>Online<span>- </span> Store</i></span
                 >
               </div>
             </a>
@@ -118,13 +129,21 @@
     <!-- Single products section begins here -->
     <section id="productDetails" class="productDetails section-p1 section-m1">
       <div class="singleProductImgs">
-        <img
-          src="./img/cart/shopmain/double vent.jpg"
-          id="mainProduct"
-          width="100%"
-          height="500px"
-          alt=""
-        />
+        <img src="./img/single products/shoe1.jpg" id="mainProduct" width="100%" height="500px" alt=""/>
+        <div class="typesGroup">
+          <div class="typesCol">
+            <img src="./img/single products/shoe1.jpg" width="100%" class="typesImg" alt="">
+          </div>
+          <div class="typesCol">
+            <img src="./img//single products/shoe2.jpg" width="100%" class="typesImg" alt="">
+          </div>
+          <div class="typesCol">
+            <img src="./img/single products/shoe3.jpg" width="100%" class="typesImg" alt="">
+          </div>
+          <div class="typesCol">
+            <img src="./img/single products/shoe4.jpg" width="100%" class="typesImg" alt="">
+          </div>
+        </div>
       </div>
 
       <div class="productDesc" id="proDescription">
@@ -153,95 +172,17 @@
         >
       </div>
     </section>
-    <hr />
+  
     <!-- Single products section ends here -->
 
-    <!-- Other products section -->
-    <section id="products" class="products section-p1 section-m1">
-      <h2>Other Clothing Products</h2>
-      <p>Find other clothing products in our prestigious Store!!!</p>
-      <div class="productsBox">
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/2.jpg" alt="" />
-          <div class="description">
-            <span>Slim Fit Suit</span>
-            <h5>Contoured to the body, slim but has some room for comfort</h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-        </div>
-
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/3.jpg" alt="" />
-          <div class="description">
-            <span>Modern Fit Suit</span>
-            <h5>Slim fit, contoured, shorter length.</h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-        </div>
-
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/4.jpg" alt="" />
-          <div class="description">
-            <span>Patch Pocket Blazer</span>
-            <h5>
-              Popular style from the 80s where the classic ‘V’ style was a
-              mainstay.
-            </h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-        </div>
-
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/6.png" alt="" />
-          <div class="description">
-            <span>Double Breasted Suit</span>
-            <h5>4, 6 or 8 buttons max, 6 being the most common</h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-        </div>
-      </div>
-    </section>
-    <!-- Other products section ends here -->
+   <!-- Single products section begins here -->
+   <section id="products" class="products section-p1 section-m1">
+    <h1 class="headings">Other Products</h1>
+    <div class="productsBox" id="productsBox">
+      
+    </div>
+  </section>
+  <!-- Single products section ends here -->
 
     <!-- cart overlay -->
     <section id="cartOverlay">
@@ -297,7 +238,7 @@
             <img src="./img/icons/brand.png" class="footerBrandImage" alt="" />
           </a>
           <span
-            ><i>Clothing<span>- </span> Store</i></span
+            ><i>Online<span>- </span> Store</i></span
           >
         </div>
         <h4>Contact</h4>
@@ -382,5 +323,6 @@
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"
   ></script>
-  <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/singlePro.js"></script>
+  <script type="text/javascript" src="./js/display.js"></script>
 </html>
