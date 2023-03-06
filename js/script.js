@@ -59,8 +59,10 @@ class UI {
           <span class="itemTitle">${product.title}</span> 
           <h5>${product.description}</h5>         
         </div>
-        <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+        
         <div class="priceBtns">
+        <h4 class="itemPrice">Ghc ${product.price}</h4>
+        <a class="shopNow proCart" onclick="window.location.href='categories.html'">Shop Now</a>
         <!--  -->
         </div>    
       </div>     
@@ -256,6 +258,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
   });
 })
 
+
+
+
+
+// swiper
 const mainSwiper = new Swiper('.homeSwiper', {
   // Optional parameters
   slidesPreview: 1,
@@ -295,15 +302,15 @@ const mainSwiper = new Swiper('.homeSwiper', {
       spaceBetween: 15,
     },
     900:{
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1020:{
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1100:{
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 20,
     },
     1210:{

@@ -1,76 +1,109 @@
+let shop = document.getElementById("firstRow");
 
-async function displayData() {
-  try {
-    const response = await fetch('../../electro.json');
-    const data = await response.json();
-    let products = data.items;
-    products = products.map(item => {
-      const {title, price, description} = item.fields;
-      const {id} = item.sys;
-      const image = item.fields.image.fields.file.url;
-      return {title, price, description, id, image};
-    })
-    
+// let shopItems = async () => {
+//   try {
+//     let result = await fetch("shop.json");
+//     let data = await result.json();
+//     let products = data.items;
+//     products = products.map(item => {
+//       const {title, price, description} = item.fields;
+//       const {id} = item.sys;
+//       const image = item.fields.image.fields.file.url;
+//       return {title, price, description, id, image};
+//     })
+//     return products;
+//   } catch (error) {
+//     console.log(error);      
+//   }
+// };
 
-    const itemsContainer = document.querySelector('#electroSwiper-wrapper');
-    itemsContainer.innerHTML = '';
 
-    data.items.forEach(item => {
-      const itemElement = document.createElement('div');
-      itemElement.classList.add('swiper-slide"');
-      itemElement.innerHTML = `
-      <!-- single Product -->
-     
-      <div class="card">
-      <div class="product">
-      <img class="itemImage" src=${item.image} />
-        <div class="description">
-          <span class="itemTitle">${item.title}</span> 
-          <h5>${item.description}</h5>         
-        </div>
-        <div class="priceBtns">
-        
-        <!--  -->
-        </div>    
-      </div>     
-      </div> 
-      </div>  
-      <!-- single product ends here -->
-      `;
-      itemsContainer.appendChild(itemElement);
-    });
-  } catch (error) {
-    console.error(error);
+// let generateShop = () => {
+//   return  (shop.innerHTML = `
+//   <!-- single Product -->
+//   <div class="card">
+//     <div class="product">
+//     <img class="itemImage" src="./img/categoreis/electro/controller.jpg" />
+//       <div class="description">
+//         <span class="itemTitle">hjhj</span> 
+//         <h5>jkjkj</h5>         
+//       </div>
+//       <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+//       <div class="priceBtns">
+//         <h4 class="itemPrice">Ghc 17.99</h4>
+//       <!--  -->
+//       </div>    
+//     </div>     
+//     </div>   
+// <!-- single product ends here -->
+//   `)
+// }
+
+// generateShop();
+
+
+
+// getting products implementation below
+class IndexProducts {
+  async getProducts(){
+    try {
+      let result = await fetch("health.json");
+      let data = await result.json();
+      let products = data.items;
+      products = products.map(item => {
+        const {title, price, description} = item.fields;
+        const {id} = item.sys;
+        const image = item.fields.image.fields.file.url;
+        return {title, price, description, id, image};
+      })
+      return products;
+    } catch (error) {
+      console.log(error);      
+    }
   }
 }
 
+// display products implementation
+class IndexUI {
+  loadAllIndexProducts(products){
+    let indexItemResult = "";
+    products.forEach(product => {
+      indexItemResult += `
+      <!-- single Product -->
+      <div class="card">
+      <div class="product">
+      <img class="itemImage" src=${product.image} />
+        <div class="description">
+          <span class="itemTitle">${product.title}</span> 
+          <h5>${product.description}</h5>         
+        </div>
+        <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
+        <div class="priceBtns">
+        <h4 class="itemPrice">Ghc ${product.price}</h4>
+        <!--  -->
+        </div>    
+      </div>     
+      </div>  
+      <!-- single product ends here -->
+      `      
+    });
+    
+    shop.innerHTML = indexItemResult;
+  }
+}
 
-displayData();
+// DOM load event 
+document.addEventListener("DOMContentLoaded", ()=>{
+  const ui = new IndexUI();
+  const products = new IndexProducts();
 
-// async function displayData() {
-//   try {
-//     const response = await fetch('data.json');
-//     const data = await response.json();
+  //get product items
+  products.getProducts().then(products => {
+    ui.loadAllIndexProducts(products);
+    Storage.saveCartItems(products);
+  }).then( () => {
+    ui.getAddToCartBtns();
+    ui.cartLogic();
 
-//     const itemsContainer = document.querySelector('#electroSwiper-wrapper');
-//     itemsContainer.innerHTML = '';
-
-//     data.items.forEach(({ fields: { title, description, image: { fields: { file: { url } } } } }) => {
-//       const itemElement = document.createElement('div');
-//       itemElement.classList.add('item');
-//       itemElement.innerHTML = `
-//         <h2>${title}</h2>
-//         <p>${description}</p>
-//         <img src="${url}" alt="${title}">
-//       `;
-//       itemsContainer.appendChild(itemElement);
-//     });
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
-
-
-
-
+  });
+})
