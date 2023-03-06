@@ -101,9 +101,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
   products.getProducts().then(products => {
     ui.loadAllIndexProducts(products);
     Storage.saveCartItems(products);
-  }).then( () => {
-    ui.getAddToCartBtns();
-    ui.cartLogic();
-
-  });
+  })
 })
