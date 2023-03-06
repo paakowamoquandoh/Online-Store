@@ -15,7 +15,7 @@
           "title": "Slim Fit Suit",
           "description": "Contoured to the body, slim but has some room for comfort",
           "price": 460,
-          "image": { "fields": {"file": {"url": "../img/homeCart/image2.png"}}}
+          "image": { "fields": {"file": {"url": "./img/homeCart/image2.png"}}}
         }
     },
     {
@@ -51,7 +51,7 @@
             "title": "African Wear",
             "description": "Iconic modern African apparel styles.",
             "price": 391,
-            "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+            "image": { "fields": {"file": {"url": "./img/homeCart/image11.png"}}}
           }
       },
       {
@@ -87,7 +87,7 @@
         "title": "Slim Fit Suit",
         "description": "Contoured to the body, slim but has some room for comfort",
         "price": 460,
-        "image": { "fields": {"file": {"url": "../img/homeCart/image5.png"}}}
+        "image": { "fields": {"file": {"url": "./img/homeCart/image5.png"}}}
       }
   },
   {
@@ -123,7 +123,7 @@
           "title": "African Wear",
           "description": "Iconic modern African apparel styles.",
           "price": 391,
-          "image": { "fields": {"file": {"url": "../img/homeCart/image9.png"}}}
+          "image": { "fields": {"file": {"url": "./img/homeCart/image9.png"}}}
         }
     },
     {
