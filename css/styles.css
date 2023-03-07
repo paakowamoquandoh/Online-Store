@@ -1355,6 +1355,10 @@ span.price {
 }
 
 @media (max-width: 1210px) {  
+   .cards-wrapper{
+    margin-top: 30px;
+   }
+
   .section-p1{
     padding: 40px 10px;
   }
@@ -1614,6 +1618,10 @@ span.price {
     margin: 8px 30px 8px -25px;
   }
 
+  .products{
+    margin-top: 1rem;
+  }
+
   .product .card{
      margin: 0px -5px;
   }
@@ -1652,7 +1660,8 @@ span.price {
   }
 
   .card .product .priceBtns h4 {
-    right: 168px;
+    right: 148px;
+    bottom: -4px;
     text-align: start;
   }
 
@@ -1684,6 +1693,8 @@ span.price {
 
   .proBanner{
     margin-top: -4.2rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .proBanner .promoBox {
@@ -1693,7 +1704,7 @@ span.price {
   }
 
   .productBanners .bannerBox {
-    width: 28%;
+    width: 30%;
   }
 
   .newsletter .signUpFrom {
@@ -1798,7 +1809,10 @@ span.price {
 
   .cards-wrapper{
     overflow-x: scroll;
-    margin-bottom: 5px;
+    margin-bottom: -55px;
+    margin-top: 30px;
+    margin-left: 5px;
+    padding: 0;
   }
 
   .cards {
@@ -1806,21 +1820,18 @@ span.price {
   }
 
   .card {
-    width: 14rem;
-    height: 25rem;  
-  }
-
-
-  .products .homeCategory {
-    text-align: center;
-    margin-bottom: -25px;
-    font-size: x-large;
-    font-weight: 500;
+    width: 13rem;
+    height: 17rem;  
+    margin: 0px -10px;
   }
 
   .card .product .description .stars {
     margin-bottom: 3px;
     margin-top: -2px;
+  }
+
+  .productIntro{
+    margin-top: 8px;
   }
 
   .products h2 {
@@ -1840,26 +1851,73 @@ span.price {
     border-bottom: none;
   }
 
+  .products .productsBox .card {
+    height: 17rem;
+    width: 14.6rem;
+  }
+
+  .products .productsBox .card .product {
+    height: 16.6rem;
+    width: auto;
+  }
+
+  .products .productsBox .card .product .priceBtns h4{
+    right: 140px;
+    font-size: large;
+    bottom: 5px;
+  }
+
+  .products .productsBox .card .product .description{
+    margin-top: 5px;
+  }
+
+  .products .productsBox .card .product .description h5{
+    margin-top: 3px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .products .productsBox .card .product .shopNow{
+    bottom: 8px;
+  }
+
+  .swiper-wrapper{
+    margin-top: 30px;
+  }
+
+  .swiper-wrapper .card .product .description{ 
+    margin-top: 5px;
+  }
+
+  .swiper-wrapper .card .product .description h5{ 
+    display: none;
+  }
+
   .card .product img {
     height: 8rem;
   }
 
+  .card .product .description{
+    margin-top: -15px;
+  }
+
   .card .product .description h5 {
-    text-align: start;
-    margin-top: -6.5px;
+    text-align: center;
+    margin-top: -1.5px;
   }
 
   .card .product .description span {
     background-color: rgba(255, 255, 255, 0.815);
-    padding-top: 10px;
+    padding-top: 1px;
     color: #2c2a24;
   }
 
   .card .product {
-    width: 25%;
-    min-width: 12rem;
-    height: 17rem;
-    border: 2px solid rgba(0, 128, 128, 0.678);
+    width: 22%;
+    min-width: 11rem;
+    height: 13.5rem;
+    border: none;
+    box-shadow: 0 5px 15px rgba(153, 153, 153, 0.425);
   }
 
   .card .product .priceBtns h4 {
@@ -1882,17 +1940,18 @@ span.price {
     font-size: 2rem;
   }
 
-  .proBanner .promoBox {
-    height: 40vh;
+  .marginSides{
+    margin: 0 10px; 
   }
 
-  .productBanners {
-    padding: 0 20px;
+  .proBanner{
+   display: none;
   }
-
-  .productBanners .bannerBox {
-    width: 100%;
+  
+  .promoCard{
+    margin: 10px;
   }
+   
 
   .newsletter {
     padding: 40px 20px;
